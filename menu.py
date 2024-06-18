@@ -92,3 +92,6 @@ def take_order():
         print(f"{item_name}{spaces_item}| ${price:.2f}{spaces_price}| {quantity}{spaces_quantity}")
         
     # Print total price
+    print(f"\nTotal price: ${total_price:.2f}")
+    
+#run the order system
