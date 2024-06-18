@@ -5,3 +5,10 @@ menu_items = {
     3: ("Soft Drink", .99),
     4: ("Coffee",.50)
 }
+
+
+# Function to print menu
+def print_menu():
+    print("Menu:")
+    for key, value in menu_items.items():
+        print(f"{key}. {value[0]} - ${value[1]:.2f}")
