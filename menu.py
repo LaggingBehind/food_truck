@@ -12,3 +12,14 @@ def print_menu():
     print("Menu:")
     for key, value in menu_items.items():
         print(f"{key}. {value[0]} - ${value[1]:.2f}")
+
+# Order list to stores customer
+order_list = []
+
+# Funtion to add items to order
+def add_to_order(item_name, price, quantity):
+    order_list.append({
+        "Item name": item_name,
+        "price": price,
+        "Quantity": quantity
+    })
