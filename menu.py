@@ -84,3 +84,11 @@ def take_order():
         total_price += price * quantity
         
         # Calculate spaces for formatting
+        spaces_item = " " * (26 - lan(item_name))
+        spaces_price = " " * (7 - len(f"${price:.2f}"))
+        spaces_quantity = " " * (9 - len(str(quantity)))
+        
+        # Print the order line
+        print(f"{item_name}{spaces_item}| ${price:.2f}{spaces_price}| {quantity}{spaces_quantity}")
+        
+    # Print total price
