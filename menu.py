@@ -73,3 +73,14 @@ def take_order():
             break
         
 # Print receipt
+    print("\nReceipt")
+    print("Item name            | Price | Quantitiy")
+    print("---------------------|-------|----------")
+    total_price = 0
+    for order in order_list:
+        item_name = order["Item name"]
+        price = order["Price"]
+        quantity = order["Quantity"]
+        total_price += price * quantity
+        
+        # Calculate spaces for formatting
