@@ -54,4 +54,22 @@ def take_order():
             quantity = int(quantity_input)
             
         # Add item to order list
+        add_to_order(item_name, price, quantity)
         
+        # Ask if the customer wants to continue ordering
+        while True:
+            continue_ordering = input("Would you like to order another item? (y/n): ")
+            if continue_ordering == "y":
+                place_order = True
+                break
+            elif continue_ordering == "n":
+                place_order = False
+                print("Thank you for your order.")
+                break
+            else:
+                print("Invalid intput. Please enter y or n.")
+                
+        if not place_order:
+            break
+        
+# Print receipt
