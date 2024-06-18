@@ -31,3 +31,13 @@ def take_order():
         menu_selection = input("Please enter the menu item number you would like: ")
         
         # Validate menu_selection
+        if not menu_selection.isdigit():
+            print("Invalid input. Please enter a number.")
+            continue
+        
+        menu_selection = int(menu_selection)
+        
+        if menu_selection not in menu_items:
+            print("Invalid selsction. Please choose valid item number.")
+            continue
+        
