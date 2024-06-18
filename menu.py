@@ -41,3 +41,17 @@ def take_order():
             print("Invalid selsction. Please choose valid item number.")
             continue
         
+        # Get item details from menu
+        item_name, price = menu_items[menu_selection]
+        
+        # Get quantity
+        quantity_input = input(f"How many of {item_name} would you like to order?")
+        
+        if not quantity_input.isdigit():
+            print(f"Inavlid input for quantity. defaulting quantity to 1.")
+            quantity = 1
+        else:
+            quantity = int(quantity_input)
+            
+        # Add item to order list
+        
