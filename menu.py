@@ -23,3 +23,11 @@ def add_to_order(item_name, price, quantity):
         "price": price,
         "Quantity": quantity
     })
+    
+# Main program to take orders and print receipt
+def take_order():
+    while True:
+        print_menu()
+        menu_selection = input("Please enter the menu item number you would like: ")
+        
+        # Validate menu_selection
